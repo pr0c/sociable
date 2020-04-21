@@ -1,0 +1,12 @@
+{
+    "name": "ap0stol/sociable.loc",
+    "authors": [
+        {
+            "name": "Vladyslav Yevtiukhin",
+            "email": "vladyevtiukhin@gmail.com"
+        }
+    ],
+    "require": {
+        "twig/twig": "3.0"
+    }
+}

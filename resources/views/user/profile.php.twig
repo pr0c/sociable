@@ -1,0 +1,33 @@
+{% extends 'base.php.twig' %}
+
+{% block css %}
+    <link rel="stylesheet" href="/public/css/profile.css">
+{% endblock %}
+
+{% block body %}
+    <div class="profile">
+        <div class="main-photo">
+            <div class="photo-container">
+                <img src="/public/img/user.png">
+            </div>
+            {% if auth.getId() != user.id %}
+                <button type="button" class="btn btn-light">Add to friends</button>
+                <button type="button" class="btn btn-light">Message</button>
+            {% endif %}
+        </div>
+        <div class="main-info">
+            Name: {{ user.login }}
+            <br>Password: {{ user.password }}
+        </div>
+    </div>
+    <div class="other">
+        <div class="left-block"></div>
+        <div class="posts">
+            <form>
+                <textarea>
+                    
+                </textarea>
+            </form>
+        </div>
+    </div>
+{% endblock %}

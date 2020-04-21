@@ -1,0 +1,57 @@
+.content {
+    background-color: rgb(254, 254, 254);
+}
+
+.profile {
+    display: flex;
+    justify-content: space-between;
+    border-radius: 5px;
+    padding: 15px;
+    /* height: 500px; */
+}
+
+.profile .main-photo {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.main-photo button {
+    margin-top: 5px;
+}
+
+.main-photo .photo-container {
+    border: 1px solid #e8e8e8;
+    border-radius: 5px;
+    box-shadow: 3px -2px 5px #e8e8e8;
+    padding: 10px;
+}
+
+.profile .main-photo img {
+    height: 250px;
+    width: 250px;
+}
+
+.profile .main-info {
+    border: 1px solid #e8e8e8;
+    border-radius: 5px;
+    box-shadow: -3px -2px 5px #e8e8e8;
+    width: 75%;
+    padding: 10px;
+}
+
+.other {
+    display: flex;
+}
+
+.other .left-block {
+    width: 340px;
+}
+
+.other .posts {
+    border: 1px solid #e8e8e8;
+    border-radius: 5px;
+    box-shadow: -3px -2px 5px #e8e8e8;
+    width: 73.5%;
+    padding: 10px;
+}

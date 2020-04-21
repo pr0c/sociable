@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <title>{{ app.title }}</title>
+        <link rel="stylesheet" href="/public/css/bootstrap.css">
+        <link rel="stylesheet" href="/public/css/main.css">
+        {% block css %}{% endblock %}
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-sm navbar-light bg-light site-nav">
+            <a class="navbar-brand mb-0" href="?c=user&a=profile">
+                {% if auth.isLogged() %}
+                    <img class="nav-user" src="/public/img/user.png">
+                    <a class="profile-link nav-link" href="#">Messages <span class="badge badge-secondary">New</span></a>
+                {% endif %}
+            </a>
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="/">News</a>
+                </li>
+            </ul>
+            {% if auth.isLogged() == false %}
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ router.path('register') }}">Sign up</a>
+                    </li>
+                    <hr class="nav-hr" width="1" size="500">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ router.path('login') }}">Sign in</a>
+                    </li>
+                </ul>
+            {% else %}
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ router.path('logout') }}">Logout</a>
+                    </li>
+                </ul>
+            {% endif %}
+        </nav>
+        <div class="content">
+            {% block body %}
+            {% endblock %}
+        </div>
+    </body>
+</html>
